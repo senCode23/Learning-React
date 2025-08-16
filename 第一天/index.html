@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 使用 React 18 的 UMD 脚本 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <div id="test"></div>
+
+    <script type="text/babel">
+      const msg = <h1>Hello, React!</h1>;
+      const svdom = <a href="https://www.baidu.com">www.baidu.com</a>;
+
+      let book_list = [
+        { id: 1, name: "JavaScript权威指南", price: 99 },
+        { id: 2, name: "JavaScript高级程序设计", price: 88 },
+        { id: 3, name: "JavaScript语言精粹", price: 77 },
+      ];
+
+      const book_list_element = (
+        <ul>
+          {book_list.map((book) => (
+            <li key={book.id}>
+              {book.name} - {book.price}
+            </li>
+          ))}
+        </ul>
+      );
+
+      const element = (
+        <a href="https://www.baidu.com">
+          {1 > 2 ? <h1>大于</h1> : <h1>小于</h1>}
+        </a>
+      );
+
+      // const root = ReactDOM.createRoot(document.querySelector('#root'));
+      // root.render(<div dangerouslySetInnerHTML={{ __html: htmlContent }}
+      // jsx注入写法，注意要用双引号包裹html内容，并且要用dangerouslySetInnerHTML={{ __html: htmlContent }}
+      // 这样才能将html内容渲染到页面上
+
+      const app = (
+        <div>
+          {msg}
+          {svdom}
+          {/* 在jsx语句里写注释要带上花括号 */}
+        </div>
+      );
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      const root1 = ReactDOM.createRoot(document.querySelector("#test"));
+      root.render(app);
+      root1.render(book_list_element);
+    </script>
+  </body>
+</html>
