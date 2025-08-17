@@ -8,3 +8,14 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 
 )
+
+
+// export default function main() {
+//   return (
+//     <div>main</div>
+//   )
+// }
+
+//函数式开发
+
+
