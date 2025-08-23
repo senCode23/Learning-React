@@ -99,7 +99,7 @@ export default class App extends Component<{}, AppState> {
         <div className="music">
           <h1>MUSIC</h1>
           <div className='container'>
-                <div className="item" onClick={()=>this.setState({choiced:0})}>流行</div>
+                <div className="item font-bold " onClick={()=>this.setState({choiced:0})}>流行</div>
                 <div className="item" onClick={()=>this.setState({choiced:1})}>摇滚</div>
                 <div className="item" onClick={()=>this.setState({choiced:2})}>民谣</div>
           </div>
