@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./175-交叉观察器.js"></script>
+
+</head>
+
+<style>
+    #target1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative; 
+    }
+
+    #target2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative; 
+        top: 100vh; 
+    }
+    #target3 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: relative; 
+        top: 50vh; 
+    }
+</style>
+
+<body>
+
+    <div id="root">
+        <div id="target1"></div>
+        <div id="target2"></div>
+        <div id="target3">ss</div>
+    </div>
+</body>
+</html>

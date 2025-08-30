@@ -1,11 +1,20 @@
 
 import React from 'react';
 import { Component } from 'react';
+import { styled } from "styled-components";
 
 // 定义 props 的类型（如果没有 props，可以留空）
 interface AppProps {
   name: string;
 }
+
+const ButtonStyle = styled.button`
+  backgroundColor: blue;
+  color: black;
+  padding: 10px;
+  borderRadius: 5px;
+  cursor: pointer;
+`
 
 // 定义 state 的类型
 interface AppState {
@@ -41,6 +50,8 @@ export default class App extends Component<AppProps, AppState> {
           console.log(e.target.value);
           
         }}/>
+
+        <ButtonStyle>编辑按钮</ButtonStyle>
 
         <button onClick={() => {
           console.log(this.inputRef.current?.innerText)
