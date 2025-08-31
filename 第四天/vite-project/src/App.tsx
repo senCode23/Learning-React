@@ -22,11 +22,13 @@ interface AppState {
   hellos: string[];
 }
 
+type AppProps = object;
+
 // App 的 props 类型（如果没有 props，可以为空对象）
 // interface AppProps {}
 
-export default class App extends Component<never, AppState> {
-  constructor(props: never) {
+export default class App extends Component<AppProps, AppState> {
+  constructor(props: AppProps) {
     super(props);
     this.state = {
       comments: [],

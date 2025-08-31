@@ -23,6 +23,7 @@ export default class CommentO extends Component<Props> {
     const { id, avatar, content, author, time } = this.props.comment;
 
     return (
+      
       <div
         className="comment-card"
         style={{
