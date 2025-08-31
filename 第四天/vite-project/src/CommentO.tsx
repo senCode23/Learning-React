@@ -19,9 +19,12 @@ interface Props {
 }
 
 export default class CommentO extends Component<Props> {
+
+
+
   render() {
     const { id, avatar, content, author, time } = this.props.comment;
-
+    
     return (
       
       <div

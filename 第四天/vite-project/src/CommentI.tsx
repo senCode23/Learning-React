@@ -2,6 +2,7 @@ import { Button, Flex, Input } from 'antd';
 import React, { Component } from 'react';
 import moment from 'moment';
 
+
 const { TextArea } = Input;
 
 // 定义评论的类型
